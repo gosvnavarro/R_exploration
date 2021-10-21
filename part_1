@@ -1,0 +1,4 @@
+# COMMAND 1
+#   Since we have a lot of values in some ("handmade") data frames 
+#   one important point is to filter it to see the ones with high values
+teste_maiores_valores <- head(cities[order(cities$Freq, decreasing = TRUE), ], 1000)
