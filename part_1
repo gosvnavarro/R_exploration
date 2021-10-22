@@ -1,4 +1,8 @@
 # COMMAND 1
-#   Since we have a lot of values in some ("handmade") data frames 
-#   one important point is to filter it to see the ones with high values
+#   Since we have a lot of values in some ("handmade") data frames one important point is to filter it to see the ones with high values.
 teste_maiores_valores <- head(cities[order(cities$Freq, decreasing = TRUE), ], 1000)
+
+# COMMAND 2
+#   This helps us check the presence of certain values (given the condition) in any row of every column of the data frame.
+library(dplyr)
+teste <- shipments %>% filter_all(any_vars(. %in% c(0, 'null')))
