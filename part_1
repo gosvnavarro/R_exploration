@@ -21,3 +21,8 @@ which(table4$column_X == "specific_value_of_interest") # just check the index
 #   Exclude rows based on the index of it.
 teste_e <- teste_e[-row_index, ] # for one row
 teste_f <- teste_f[-c(weird_date1, weird_date2, ...), ] # for more than one row
+
+# COMMAND 5
+#   Exclude columns.
+teste_g$column_to_be_deleted <- NULL # for one column
+teste_h$first_col <- teste_h$next_col <- teste_h$another_col <- NULL # an ugly way to delete multiple columns at the same time
