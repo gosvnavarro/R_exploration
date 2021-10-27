@@ -9,5 +9,10 @@ teste_a <- shipments %>% filter_all(any_vars(. %in% c(0, 'null')))
 
 # COMMAND 3
 #   Check the similarity between ids among the data frames.
-teste_b <- merge(zeros_in_table1, zeros_in_table2, by.x="order_id", by.y="order_id") #for two dataframes
-teste_c <- Reduce(function(...) merge(..., all = TRUE), list(zeros_in_table1, zeros_in_table2, zeros_in_table3)) #for more than two dataframes
+teste_b <- merge(zeros_in_table1, zeros_in_table2, by.x="order_id", by.y="order_id") # for two dataframes
+teste_c <- Reduce(function(...) merge(..., all = TRUE), list(zeros_in_table1, zeros_in_table2, zeros_in_table3)) # for more than two dataframes
+
+# COMMAND 4
+#   Identify the index of a row that contains a specific value.
+teste_d <- which(table4$column_X == "specific_value_of_interest") # save the index to a variable
+which(table4$column_X == "specific_value_of_interest") # just check the index
