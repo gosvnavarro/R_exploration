@@ -16,3 +16,8 @@ teste_c <- Reduce(function(...) merge(..., all = TRUE), list(zeros_in_table1, ze
 #   Identify the index of a row that contains a specific value.
 teste_d <- which(table4$column_X == "specific_value_of_interest") # save the index to a variable
 which(table4$column_X == "specific_value_of_interest") # just check the index
+
+# COMMAND 5
+#   Exclude rows based on the index of it.
+teste_e <- teste_e[-row_index, ] # for one row
+teste_f <- teste_f[-c(weird_date1, weird_date2, ...), ] # for more than one row
