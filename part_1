@@ -35,3 +35,7 @@ teste_j <- teste_i[, c(1, 5:17)] # copy specific columns
 # COMMAND 8
 #   Exclude rows based on a condition.
 teste_k <- teste_k[!(teste_k$col_1 > 1000), ] # the condition shown here is based on values greater than 1000.
+
+# COMMAND 9
+#   Create a new column from a condition.
+teste_lP$new_colunm <- ifelse(teste_l$col_1 == teste_l$col_4, "Same", "Different")
