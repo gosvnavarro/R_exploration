@@ -39,3 +39,8 @@ teste_k <- teste_k[!(teste_k$col_1 > 1000), ] # the condition shown here is base
 # COMMAND 9
 #   Create a new column from a condition.
 teste_lP$new_colunm <- ifelse(teste_l$col_1 == teste_l$col_4, "Same", "Different")
+
+# COMMAND 10
+#   Check unique values and the total of it.
+categories <- unique(teste_m$col_of_interest) 
+numberOfCategories <- length(categories)
