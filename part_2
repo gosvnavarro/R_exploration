@@ -1,0 +1,9 @@
+# COMMAND 1
+#   Change the enconding of a data frame.
+iconv(teste_m, from = 'UTF-8', to = 'ASCII//TRANSLIT')
+
+# COMMAND 2
+#   Change the axis values of a plot. (NOTE: the '*' must be changed to the axis, x or y, that you want to change).
+library(scales)
+scale_*_continuous(labels = scales::scientific) # change to scientific notation
+scale_*_continuous(labels = scales::comma) # change to comma format
