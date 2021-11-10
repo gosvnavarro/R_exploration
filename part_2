@@ -1,8 +1,12 @@
 # COMMAND 1
 #   Change the enconding of a data frame.
-iconv(teste_m, from = 'UTF-8', to = 'ASCII//TRANSLIT')
+iconv(teste_a, from = 'UTF-8', to = 'ASCII//TRANSLIT')
 
 # COMMAND 2
+#   Create a new dataframe based on a condition regarding one specific column.
+teste_b <- subset(teste_a, teste_a$col_4 >= 100)
+
+# COMMAND 3
 #   Change the axis values of a plot. (NOTE: the '*' must be changed to the axis, x or y, that you want to change).
 library(scales)
 scale_*_continuous(labels = scales::scientific) # change to scientific notation
