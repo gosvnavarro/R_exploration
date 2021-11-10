@@ -5,6 +5,7 @@ scale_*_continuous(labels = scales::scientific) # change to scientific notation
 scale_*_continuous(labels = scales::comma) # change to comma format
 
 # NEEDS REVIEW!! - The aim here is to add a label on the dots regarding the count of cases
+# source: https://stackoverflow.com/questions/46851450/add-count-as-label-to-points-in-geom-count/46852401#46852401
 p <- ggplot(data = data, aes(x = x, y = y)) +
   geom_count() + scale_size_continuous(range = c(10, 15))
 p + geom_text(data = ggplot_build(p)$data[[1]], 
