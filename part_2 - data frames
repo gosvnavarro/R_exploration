@@ -8,4 +8,5 @@ teste_b <- subset(teste_a, teste_a$col_4 >= 100)
 
 # COMMAND 3
 #   Get the name of all columns of a data frame.
-names(shipments_and_stores)
+names(teste_c) # OR
+colnames(teste_c)
