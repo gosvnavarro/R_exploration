@@ -44,3 +44,16 @@ teste_lP$new_colunm <- ifelse(teste_l$col_1 == teste_l$col_4, "Same", "Different
 #   Check unique values and the total of it.
 categories <- unique(teste_m$col_of_interest) 
 numberOfCategories <- length(categories)
+
+# COMMAND 11
+#   Check the presence of NA in a specific column.
+sum(is.na(teste_n$col_3))
+
+# COMMAND 12
+#   Exclude rows that have NA values in it.
+library(tidyr)
+teste_o <- teste_n %>% drop_na(col_2) # OR
+
+teste_p[!is.na(teste_p$col_5), ] # OR
+
+teste_q[complete.cases(teste_q$col_1), ]
