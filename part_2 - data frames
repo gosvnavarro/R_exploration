@@ -5,3 +5,7 @@ iconv(teste_a, from = 'UTF-8', to = 'ASCII//TRANSLIT')
 # COMMAND 2
 #   Create a new dataframe based on a condition regarding one specific column.
 teste_b <- subset(teste_a, teste_a$col_4 >= 100)
+
+# COMMAND 3
+#   Get the name of all columns of a data frame.
+names(shipments_and_stores)
