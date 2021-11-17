@@ -42,8 +42,11 @@ teste_lP$new_colunm <- ifelse(teste_l$col_1 == teste_l$col_4, "Same", "Different
 
 # COMMAND 10
 #   Check unique values and the total of it.
-categories <- unique(teste_m$col_of_interest) 
-numberOfCategories <- length(categories)
+table(teste_m$col_of_interest) # get the possible values and the count of each.
+
+# OR
+
+unique(teste_m$col_of_interest) # get just the possible values.
 
 # COMMAND 11
 #   Check the presence of NA in a specific column.
