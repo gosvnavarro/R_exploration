@@ -31,32 +31,33 @@ teste_h$first_col <- teste_h$next_col <- teste_h$another_col <- NULL # an ugly w
 #   Copy specific and the whole data frame.
 teste_i <- teste_h # copy the whole dataframe to a new one
 teste_j <- teste_i[, c(1, 5:17)] # copy specific columns
+teste_k <- teste_j[c(1:326), ] # copy specific rows
 
 # COMMAND 8
 #   Exclude rows based on a condition.
-teste_k <- teste_k[!(teste_k$col_1 > 1000), ] # the condition shown here is based on values greater than 1000.
+teste_l <- teste_l[!(teste_l$col_1 > 1000), ] # the condition shown here is based on values greater than 1000.
 
 # COMMAND 9
 #   Create a new column from a condition.
-teste_lP$new_colunm <- ifelse(teste_l$col_1 == teste_l$col_4, "Same", "Different")
+teste_mP$new_colunm <- ifelse(teste_m$col_1 == teste_m$col_4, "Same", "Different")
 
 # COMMAND 10
 #   Check unique values and the total of it.
-table(teste_m$col_of_interest) # get the possible values and the count of each.
+table(teste_n$col_of_interest) # get the possible values and the count of each.
 
 # OR
 
-unique(teste_m$col_of_interest) # get just the possible values.
+unique(teste_n$col_of_interest) # get just the possible values.
 
 # COMMAND 11
 #   Check the presence of NA in a specific column.
-sum(is.na(teste_n$col_3))
+sum(is.na(teste_o$col_3))
 
 # COMMAND 12
 #   Exclude rows that have NA values in it.
 library(tidyr)
-teste_o <- teste_n %>% drop_na(col_2) # OR
+teste_p <- teste_o %>% drop_na(col_2) # OR
 
-teste_p[!is.na(teste_p$col_5), ] # OR
+teste_q[!is.na(teste_p$col_5), ] # OR
 
-teste_q[complete.cases(teste_q$col_1), ]
+teste_r[complete.cases(teste_q$col_1), ]
