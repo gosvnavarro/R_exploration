@@ -61,3 +61,7 @@ teste_p <- teste_o %>% drop_na(col_2) # OR
 teste_q[!is.na(teste_p$col_5), ] # OR
 
 teste_r[complete.cases(teste_q$col_1), ]
+
+# COMMAND 13
+#   Get columns name.
+names(teste_s)
