@@ -18,3 +18,29 @@ ggplot(teste_a, aes(x = col_1, y = col_2)) +
   geom_count(aes(color = ..n.., size = ..n..)) +
   guides(color = 'legend') + 
   labs(x = "X axis", y = "Y axis", title = "X vs. Y")
+
+# COMMAND 3
+#   PLOT: geom_line 
+
+# With labels on graph
+ggplot(teste_b, aes(x = col_1, y = col_2, color = col_3)) +
+  geom_line(size = 1) + 
+  scale_y_continuous(labels = scales::comma) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, size = 9)) +
+  labs(x = "X axis", y = "Y axis", color = "Label",
+       title = "Title") +
+  geom_dl(aes(label = col_3,
+              color = col_3), 
+          method = list(dl.combine("last.bumpup"), cex = 0.7)) +
+  theme(legend.position = "none", 
+        plot.margin = unit(c(1,3,1,1), "lines")) +
+  scale_x_date(limits = c(min(teste_b$col_1), 
+                          max(teste_b$col_1) + 120))
+                          
+# With labels outside graph
+ggplot(owid_covid_data_VACs, aes(x = date, y = people_vaccinated, color = location)) +
+  geom_line(size=1) + 
+  scale_y_continuous(labels = scales::comma) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, size = 9)) +
+  labs(x = "Datas", y = "Total", color = "Países",
+       title = "Total de pessoas vacinadas")
