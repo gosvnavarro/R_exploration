@@ -16,8 +16,13 @@ ggplot(teste_a, aes(x = col_1, y = col_2)) +
 # With manual breaks
 ggplot(teste_a, aes(x = col_1, y = col_2)) + 
   geom_count(aes(color = ..n.., size = ..n..)) +
-  guides(color = 'legend') + 
-  labs(x = "X axis", y = "Y axis", title = "X vs. Y")
+  scale_size_continuous(breaks = seq(0, 200000, by = 20000))+
+  scale_colour_continuous(breaks = seq(0, 200000, by = 20000))+
+  guides(colour = 'legend', size = 'legend') + 
+  labs(x = "X axis", y = "Y axis", title = "X vs. Y") +
+  theme(panel.background = element_rect(fill = "#a6a48a"), 
+        panel.grid.major = element_line(size = 0.5, linetype = 'solid', colour = "gray")) + 
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, size = 7))
 
 # COMMAND 3
 #   PLOT: geom_line 
