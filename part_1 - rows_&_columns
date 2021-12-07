@@ -65,3 +65,7 @@ teste_r[complete.cases(teste_q$col_1), ]
 # COMMAND 13
 #   Get columns name.
 names(teste_s)
+
+# COMMAND 14
+#   Split a data frame in R with conditional row values.
+teste_s <- subset(teste_r, Country %in% c("India","China"))
