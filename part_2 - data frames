@@ -10,3 +10,10 @@ teste_b <- subset(teste_a, teste_a$col_4 >= 100)
 #   Get the name of all columns of a data frame.
 names(teste_c) # OR
 colnames(teste_c)
+
+# COMMAND 4
+#   Split a column into multiple ones (Reshape data from long to wide format).
+library(dplyr)
+library(tidyr)
+teste_d %>% 
+    pivot_wider(names_from = col_2, values_from = col_3)
