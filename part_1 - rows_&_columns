@@ -68,4 +68,12 @@ names(teste_s)
 
 # COMMAND 14
 #   Split a data frame in R with conditional row values.
-teste_s <- subset(teste_r, Country %in% c("India","China"))
+teste_t <- subset(teste_s, Country %in% c("India","China"))
+
+# COMMAND 14
+#   Merge multiple vector objects with different length.
+library("qpcR") 
+teste_u <- qpcR:::cbind.na(df_1, df_2) # Bind as columns
+
+library("dplyr")
+teste_v <- as.data.frame(bind_rows(vec1, vec2))  # Bind as rows
