@@ -70,3 +70,10 @@ ggplot(owid_covid_data_VACs, aes(x = date, y = people_vaccinated, color = locati
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, size = 9)) +
   labs(x = "Datas", y = "Total", color = "Países",
        title = "Total de pessoas vacinadas")
+
+# COMMAND 4
+#   PLOT: dygraphs time series 
+#   How to export
+
+library(htmlwidgets)
+saveWidget(p, file = "teste_export.html") # 'p' é referente ao modelo de serie temporal
